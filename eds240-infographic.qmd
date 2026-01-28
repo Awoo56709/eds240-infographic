@@ -1,0 +1,56 @@
+---
+title: "eds240-infographic"
+format: html
+editor: visual
+---
+
+```{r}
+library(janitor)
+library(tidyverse)
+```
+
+
+```{r}
+recipes <- read.csv("data/recipes_reviews/recipes.csv")
+```
+
+```{r}
+colnames(recipes)
+```
+
+```{r}
+# Install if not already installed
+#install.packages("arrow")
+
+# Load the package
+library(arrow)
+```
+
+```{r}
+# 
+reviews <- read_parquet("data/recipes_reviews/reviews.parquet")
+
+# View the first few rows
+head(reviews)
+```
+```{r}
+review_cy <- reviews[reviews$AuthorName == "Cyclopz",]
+```
+
+
+```{r}
+head(recipes)
+```
+
+```{r}
+# Veryfy
+
+recipe_cy <- recipes[recipes$AuthorName == "Cyclopz",]
+
+```
+
+```{r}
+#combined_df <- left_join(recipes, reviews, by = "AuthorName", relationship = "many-to-many")
+```
+
+
