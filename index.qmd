@@ -2,19 +2,24 @@
 title: "FMP4 reviewing feedback"
 author: "Joshua Ferrer-Lozano"
 date: "2026-03-08"
+
 format:
   html:
     toc: false
     code-fold: false
+
 editor: visual
 description: "A data-driven exploration of how time, complexity, ingredients, and nutrition shape recipe popularity on Food.com."
 categories: ["infographic", "data visualization", "food data", "EDS 240"]
+
 execute:
   freeze: auto
   cache: false
+
 editor_options: 
   chunk_output_type: console
 ---
+
 
 # What Makes a Recipe Popular? A Data‑Driven Look at How We Cook at Home
 
@@ -36,7 +41,8 @@ The result is the infographic below — a three‑course exploration of how we c
 
 # Final Infographic
 
-*(Insert the PNG or rendered plot here — centered and sized appropriately.)*
+![Infographic](images/info.jpg)
+
 
 # Designing the Infographic: A Behind‑the‑Scenes Look
 
