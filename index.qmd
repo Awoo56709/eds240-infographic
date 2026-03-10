@@ -16,244 +16,173 @@ editor_options:
   chunk_output_type: console
 ---
 
-
-# Reviewing Feedback
-
-1. Key feedback points I received on my FPM #3 draft visualizations
-Across peer review and instructor feedback, several themes emerged:
-
-Clarity of annotations: Some labels overlapped or competed with the data, especially in the 30‑minute plot and the complexity plot. Reviewers suggested repositioning annotations and improving hierarchy.
-
-Axis readability: A few plots had axis labels or tick marks that were either too small or too dense.
-
-Complexity plot labeling: Multiple reviewers suggested finding a more creative way to label the rating tiers instead of relying on a traditional x‑axis.
-
-Ingredient sunburst: Feedback encouraged simplifying ingredient categories and ensuring the hierarchy was intuitive.
-
-Nutrition plot: Reviewers recommended choosing a single nutritional variable and/or faceting by category to avoid clutter and improve interpretability.
-
-Overall cohesion: Several comments encouraged me to lean further into my editorial “menu” metaphor and unify the aesthetic across all plots (color, typography, spacing).
-
-2. Which suggestions I implemented and how
-I incorporated nearly all major suggestions:
-
-Improved annotation placement:  
-I repositioned labels in the 30‑minute plot (e.g., moving the recipe count label downward, adjusting the 30‑minute marker, and refining the curved arrow). This improved legibility and visual flow.
-
-Refined axis readability:  
-I increased caption size, adjusted tick spacing, and used log‑scaled review counts with intuitive labels (“1”, “10”, “100”, “1k”, “10k”).
-
-Creative labeling for the complexity plot:  
-Instead of traditional x‑axis labels, I added left‑aligned text annotations beside each stacked bar. This created a cleaner, more editorial look and aligned with feedback to experiment with non‑traditional labeling.
-
-Ingredient sunburst simplification:  
-I filtered out generic ingredients (salt, pepper, water, oil, butter) and limited each category to its top five ingredients. This made the sunburst more interpretable and visually balanced.
-
-Nutrition plot redesign:  
-Based on feedback, I selected sugar as the single nutritional variable and faceted the scatterplot by the three main categories (Dessert, Main Dish, Side Dish). This clarified the relationship between nutrition and popularity and avoided overplotting.
-
-Cohesive aesthetic:  
-I standardized my palette (warm terracotta, caramel, cream), typography (Playfair Display + Lato), and background tone (#F5EFE6 / #F7F2EB). This created a unified editorial feel across all visualizations.
-
-3. Feedback I chose not to implement and why
-Adding more categories to the nutrition facet:  
-Some reviewers suggested including all recipe categories. I decided against this because it diluted the clarity of the comparison and made the layout visually overwhelming. Focusing on the three main categories preserved readability and narrative focus.
-
-Adding more complexity tiers:  
-A suggestion was made to break complexity into more granular bins. I kept the three‑tier system (Simple, Moderate, Complex) because it aligned better with my “layered cake” metaphor and maintained interpretability.
-
-Using a different chart type for the 30‑minute plot:  
-A few peers suggested a histogram or line plot. I kept the area chart because it visually reinforces the “mountain peak” of engagement at 30 minutes and fits the editorial tone.
-
-4. Ten design elements I did not fully implement (and why)
-I addressed nearly all ten elements, but a few were less central to my project:
-
-DEI lens:  
-The dataset (Food.com recipes) does not directly represent people or communities in a way that raises equity concerns. I still considered cultural categories carefully, but DEI was not a major design driver.
-
-Accessibility through colorblind palettes:  
-My palette is warm and editorial, and while contrast is strong, it is not strictly colorblind‑optimized. I prioritized aesthetic cohesion for this specific audience (general readers of a food‑magazine‑style infographic).
-
-Contextualizing uncertainty:  
-Because my visualizations focus on descriptive patterns rather than inferential statistics, uncertainty intervals were not central to the story. I used LOESS smoothing where appropriate but did not emphasize statistical uncertainty.
-
-Everything else 
-— hierarchy, typography, color, annotation, spacing, narrative flow 
-— was implemented intentionally and consistently.
-
 # What Makes a Recipe Popular? A Data‑Driven Look at How We Cook at Home
 
-Why do some recipes take off while others barely get noticed?
-It’s a question every home cook, food blogger, and recipe platform has wondered about — and one that feels surprisingly personal. We all have dishes we return to again and again, and others we scroll past without a second thought. But what actually drives that difference at scale?
+Why do some recipes take off while others barely get noticed? It’s a question every home cook, food blogger, and recipe platform has wondered about and one that feels surprisingly personal. We all have dishes we return to again and again, and others we scroll past without a second thought. But what actually drives that difference at scale?
 
-To explore this, I turned to a massive dataset of more than 188,000 recipes published on Food.com  between 1999 and 2016. With rich metadata on ingredients, cooking times, ratings, and nutritional information, the dataset offered a rare opportunity to examine the patterns behind recipe engagement.
+To explore this, I turned to a massive dataset of more than 188,000 recipes published on Food.com between 1999 and 2016. With metadata on ingredients, cooking times, ratings, and nutritional information, the dataset offered an opportunity to examine the patterns behind recipe engagement.
 
-My goal was simple:
-understand what makes a recipe resonate with home cooks.
+My goal was to understand what makes a recipe resonate with home cooks.
 
 I approached this through three guiding questions:
 
-- Time: Do quicker recipes attract more engagement?
+-   Time: Do quicker recipes attract more engagement?
 
-- Complexity: Are simpler dishes more popular, or do cooks reward effort?
+-   Complexity: Are simpler dishes more popular, or do cooks reward effort?
 
-- Ingredients & Nutrition: What defines the “identity” of different recipe categories, and does nutrition influence popularity?
+-   Ingredients & Nutrition: What defines the “identity” of different recipe categories, and does nutrition influence popularity?
 
 The result is the infographic below — a three‑course exploration of how we cook, what we choose, and why certain recipes rise to the top.
 
 # Final Infographic
-(Insert the PNG or rendered plot here — centered and sized appropriately.)
+
+*(Insert the PNG or rendered plot here — centered and sized appropriately.)*
 
 # Designing the Infographic: A Behind‑the‑Scenes Look
+
 Creating this infographic was as much a design challenge as a data challenge. Below, I walk through the ten design elements that shaped my process and how each contributed to the final product.
 
 ## 1. Hierarchy & Visual Flow
-I structured the infographic like a meal: a starter, a main dish, a side, and a dessert.
+
+I structured the infographic like a meal: a starter, a main dish, a side (*coming soon*), and a dessert.
 
 This metaphor created a natural visual flow and helped me organize the story:
 
-- The 30‑minute plot opens the narrative with a clear, intuitive insight.
+-   The 30‑minute plot opens the narrative with a clear, intuitive insight.
 
-- The complexity “layered cake” plot anchors the center.
+-   The complexity “layered cake” plot anchors the center.
 
-- The ingredient sunburst and sugar‑popularity scatterplot act as side dishes that deepen the story.
+-   The ingredient sunburst and sugar‑popularity scatterplot act as dishes that deepen the this data analysis.
 
-This structure guides the viewer through the infographic the way a menu guides a diner.
+Like a dinner menu, this structure guides the viewer through the thought process to the conclusion.
 
 ## 2. Color
+
 I used a warm, food‑inspired palette — terracotta, caramel, cream, and sage — inspired by Bon Appétit and Sûr La Table. These tones:
 
-- evoke a culinary aesthetic
+-   evoke a culinary aesthetic
 
-- differentiate plot elements without overwhelming
+-   differentiate plot elements without overwhelming
 
-- maintain cohesion across all visualizations
+-   maintain a general cohesion across all visualizations
 
 The palette also reinforces the editorial tone I wanted.
 
 ## 3. Typography
-I paired Playfair Display for titles with Lato for body text and annotations.
-This serif‑sans pairing is common in modern food media and strikes a balance between elegance and readability.
+
+I paired Playfair Display for titles with Lato for body text and annotations. This serif‑sans pairing is common in modern food media and creates a balance between elegance and readability.
 
 ## 4. Annotation
+
 Annotations were essential for turning raw data into a narrative:
 
--  “30‑Minute Sweet Spot” label highlights the dramatic drop‑off in engagement.
+-   “30‑Minute Sweet Spot” label highlights the dramatic drop‑off in engagement.
 
-- A curved arrow emphasizes the decline after 30 minutes.
+-   A curved arrow emphasizes the decline after 30 minutes.
 
-- The complexity plot uses left‑aligned labels instead of a traditional x‑axis, creating a cleaner editorial look.
+-   The complexity plot uses left‑aligned labels instead of a traditional x‑axis, creating a cleaner editorial look.
 
-- The sugar‑popularity plot includes intuitive log‑scale labels (“1”, “10”, “100”, “1k”, “10k”).
+-   The sugar‑popularity plot includes intuitive log‑scale labels (“1”, “10”, “100”, “1k”, “10k”).
 
 These annotations help the viewer understand the story without needing to decode the data.
 
 ## 5. Layout
-I used generous spacing, centered titles, and consistent margins to maintain an airy, magazine‑style feel. Circular elements (like the sunburst and radial calorie plot) balance the rectangular bar charts and scatterplots, creating visual variety without clutter.
+
+I used generous spacing, centered titles, and consistent margins to maintain an airy, magazine‑style feel. Circular elements (like the sunburst (*and radial calorie plot*) balance the rectangular bar charts and scatterplots, creating visual variety without monotony.
 
 ## 6. Simplicity
+
 Each visualization focuses on a single idea:
 
-- Time → engagement
+-   Time relates to engagement
 
-- Complexity → rating tiers
+-   Complexity relates to rating tiers
 
-- Ingredients → category identity
+-   Ingredients relates to category identity
 
-- Sugar → popularity
+-   Sugar relates to popularity
 
-I intentionally avoided overplotting and limited categories where necessary (e.g., top five ingredients per category, three main facets for the sugar plot).
+I intentionally avoided overplotting and limited categories where necessary (top five ingredients per category, three main facets for the sugar plot).
 
 ## 7. Consistency
+
 All plots share:
 
-- the same background tone (#F5EFE6 / #F7F2EB)
+-   the general background tone (#F5EFE6 / #F7F2EB)
 
-- the same font system
+-   the same font system
 
-- similar annotation styling
+-   similar annotation styling
 
-- a warm, cohesive palette
+-   a cohesive palette
 
-This consistency makes the infographic feel like a unified piece rather than a collection of separate charts.
+This consistency makes the infographic feel unified rather than distracting or detracting from the other "dishes" so to speak.
 
 ## 8. Accessibility
+
 I used:
 
-- high‑contrast text
+-   high‑contrast text
 
-- clear labels
+-   clear labels
 
-- intuitive axis scales
+-   intuitive axis scales
 
-- non‑color cues (stacking order, spacing)
+-   non‑color cues (stacking order, spacing)
 
 While the palette is not strictly colorblind‑optimized, contrast remains strong and readability is preserved.
 
 ## 9. Storytelling
+
 Each visualization answers a sub‑question, but together they reveal a broader pattern:
 
-- Home cooks overwhelmingly prefer quick recipes.
+-   Home cooks overwhelmingly prefer quick recipes.
 
-- Moderate complexity is the sweet spot across rating tiers.
+-   Moderate complexity is the sweet spot across rating tiers.
 
-- Ingredient families define the identity of recipe categories.
+-   Ingredient families define the identity of recipe categories.
 
-- Nutrition — specifically sugar — plays a subtle but category‑dependent role in popularity.
+-   Nutrition (like sugar) can play a category‑dependent role in popularity.
 
 The narrative builds from practical (time) to structural (ingredients) to evaluative (ratings and nutrition).
 
 ## 10. Applying a DEI Lens
 
-The dataset does not directly represent people or communities in a way that raises equity concerns, but I was mindful of how I categorized cuisines and avoided reinforcing stereotypes. I focused on descriptive patterns rather than value judgments.
+The dataset does not directly represent people or communities in a way that raises equity concerns, but I was mindful of how I categorized cuisines. Perhaps looking into national dishes can be a future analysis.
 
 # Closing Thoughts
-This project taught me how messy real‑world food data can be — and how much care is required to clean, parse, and interpret it responsibly. From ISO 8601 time strings to inconsistent ingredient formatting, the preprocessing shaped what was possible in the final visualizations.
 
-But the biggest takeaway is this:
-Popularity isn’t random. It reflects how people actually cook.
+This project taught me how messy real‑world food data can be and how much care is required to clean, parse, and interpret it responsibly. From ISO 8601 time strings to inconsistent ingredient formatting, the preprocessing shaped what was possible in the final visualizations. Moreover, starting from over 500k observations to a more reliable and not as memory intensive 200k observations gave me a better look at how rich data can be through the right strainers, appliances and funnels we have in our kitchen of tools. 
+
+But the biggest takeaway is this: Popularity isn’t random. It reflects how people actually cook.
 
 Home cooks gravitate toward quick, moderately complex dishes built from familiar ingredients. The patterns are surprisingly consistent across categories and years.
 
-In the end, this infographic is both a data story and a culinary one — a look at the rhythms, preferences, and habits that shape how we cook and eat at home.
+In the end, this infographic is both a data story and a culinary one. It gives us a look at the preferences and habits that shape how we cook and eat at home.
 
-
-# The Data
-
+# Full Foldable Code
 
 ```{r}
-#| echo: false
-#| message: false
-#| warning: false
-#| results: 'hide'
+#| code-fold: true
+#| eval: false
+#| echo: true
 
+# Load Libaries
 library(tidyverse)
 library(janitor)
 library(lubridate)
 library(showtext)
-library(ggsunburst)
+library(plotly)
 
 font_add_google("Playfair Display", "playfair")
 font_add_google("Lato", "lato")
 showtext_auto()
-```
 
+# Import and Clean Data
 
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-#| results: 'hide'
-recipes_raw <- read_csv("data/recipes_reviews/recipes.csv") |> 
+recipes_raw <- read_csv("data/recipes_reviews/recipes.csv") |>
   clean_names()
-```
 
-
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-#| results: 'hide'
 recipes_clean <- recipes_raw |>
   filter(
     !is.na(aggregated_rating),
@@ -261,7 +190,7 @@ recipes_clean <- recipes_raw |>
     review_count > 0,
     calories < 9000,
     !is.na(recipe_category)
-  ) |> 
+  ) |>
   select(
     name, author_name, prep_time, cook_time, total_time, date_published,
     recipe_category, keywords, recipe_ingredient_quantities,
@@ -269,7 +198,7 @@ recipes_clean <- recipes_raw |>
     fat_content, saturated_fat_content, cholesterol_content,
     sodium_content, carbohydrate_content, fiber_content,
     sugar_content, protein_content, recipe_servings
-  ) |> 
+  ) |>
   mutate(
     category_group = case_when(
       str_detect(tolower(recipe_category), "dessert|cookie|cake|pie|candy|ice cream|cheesecake|brownie|pudding|tart") ~ "Dessert",
@@ -285,17 +214,13 @@ recipes_clean <- recipes_raw |>
     ),
     year_published = year(date_published),
     ingredient_count = str_count(recipe_ingredient_parts, ",") + 1
-  ) |> 
+  ) |>
   filter(category_group != "Other")
-```
+
 
 # Parse ISO 8601 Time
 
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-#| results: 'hide'
+
 parse_iso_time <- function(time_str) {
   if (is.na(time_str) || time_str == "" || time_str == "None") return(NA_real_)
   clean_str <- str_remove(time_str, "^PT")
@@ -306,16 +231,7 @@ parse_iso_time <- function(time_str) {
   if (total == 0) return(NA_real_)
   return(total)
 }
-```
 
-# Apply Parsing
-
-
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-#| results: 'hide'
 recipes_clean <- recipes_clean |>
   mutate(
     prep_minutes = map_dbl(prep_time, parse_iso_time),
@@ -328,7 +244,6 @@ recipes_clean <- recipes_clean |>
       total_minutes > 120 ~ "Very Long (>2 hrs)",
       TRUE ~ NA_character_
     ),
-    ingredient_count = str_count(recipe_ingredient_parts, ",") + 1,
     complexity = case_when(
       ingredient_count <= 5 ~ "Simple (≤5 ingredients)",
       ingredient_count <= 10 ~ "Moderate (6-10 ingredients)",
@@ -336,35 +251,23 @@ recipes_clean <- recipes_clean |>
       TRUE ~ NA_character_
     )
   )
-```
+
 
 # Fix Sugar Column
 
-```{r}
 recipes_clean <- recipes_clean |>
   mutate(
     sugar_content = as.numeric(sugar_content)
   ) |>
   filter(
     sugar_content >= 0,
-    sugar_content <= 500   # optional cap for sanity
+    sugar_content <= 500
   )
 
-# recipes_clean <- recipes_clean |>
-#   mutate(
-#     sugar_content = readr::parse_number(sugar_content)
-#   ) |>
-#   filter(
-#     sugar_content >= 0,
-#     sugar_content <= 500
-#   )
 
-```
+# Visualizations
 
-
-
-# Visual 1: The 30-Minute Sweet Spot
-```{r}
+# 1. 30-Minute Sweet Spot
 #| eval: true
 #| echo: false
 #| warning: false
@@ -401,10 +304,10 @@ ggplot(time_volume, aes(x = midpoint, y = n)) +
     color = "#4A4A4A",
     linewidth = 1,
     linetype = "longdash",
-    alpha = 0.4        # ← lighter line
+    alpha = 0.4        # make the line lighter
   ) +
 
-  # Updated annotation position
+  # Update annotation position
   annotate(
     "text",
     x = 30, y = max(time_volume$n) * 0.97,
@@ -416,7 +319,7 @@ ggplot(time_volume, aes(x = midpoint, y = n)) +
     hjust = -0.1
   ) +
 
-  # Original annotations preserved
+  # Annotations and styling
   annotate(
     "text", 
     x = 18, y = max(time_volume$n) * 0.80,
@@ -514,28 +417,14 @@ ggplot(time_volume, aes(x = midpoint, y = n)) +
     axis.text = element_text(color = "#5A5A5A", size = 14),
     axis.title = element_text(color = "#2C2416", size = 16, face = "bold")
   )
-
-```
-
-
-
-# Visual 2: Recipe Complexity by Rating Tier
-
-
-
-```{r}
-#| eval: true
-#| echo: false
-#| warning: false
-#| message: false
-#| fig-width: 12
-#| fig-height: 8
+######################################################
+# 2. Complexity by Rating Tier
 
 font_add_google("Playfair Display", "playfair")
 font_add_google("Lato", "lato")
 showtext_auto()
 
-# --- Data prep (unchanged except spelling fix) ---
+# Data prep for rating plot
 df <- recipes_clean |>
   mutate(
     rating_cat = case_when(
@@ -565,12 +454,12 @@ cake_palette <- c(
   "Complex"  = "#A5583A"
 )
 
-# --- Base plot ---
+# Base plot
 p <- ggplot(df, aes(x = rating_cat, y = prop, fill = complexity_cat)) +
   geom_col(
     color = "white",
     linewidth = 1,
-    width = 0.7   # ← adds spacing between bars
+    width = 0.7   # add spacing between bars
   ) +
   scale_y_continuous(labels = scales::percent_format()) +
   scale_fill_manual(values = cake_palette) +
@@ -596,7 +485,7 @@ p <- ggplot(df, aes(x = rating_cat, y = prop, fill = complexity_cat)) +
       size = 20,
       color = "#5A4634"
     ),
-    axis.text.x = element_blank(),   # ← remove x-axis labels
+    axis.text.x = element_blank(),   # remove x-axis labels
     axis.text.y = element_text(
       family = "lato",
       size = 16,
@@ -610,40 +499,24 @@ p <- ggplot(df, aes(x = rating_cat, y = prop, fill = complexity_cat)) +
     plot.margin = margin(20, 20, 20, 20)
   )
 
-# --- Add left-side labels for each bar ---
-# Convert factor positions to numeric for annotation placement
+# Add left-side labels for each bar
+# Convert factor positions to numeric for annotations
 rating_positions <- as.numeric(levels(df$rating_cat))
 
 p +
   annotate(
     "text",
-    x = rating_positions - 0.55,   # ← shifts labels left of bars
-    y = 0.5,                       # ← vertically centered
+    x = rating_positions - 0.55,   # Shift labels left of bars
+    y = 0.5,                       # Vertically centered
     label = levels(df$rating_cat),
     family = "lato",
     size = 6,
     hjust = 1,
     color = "#4A3F35"
   )
+##########################################################
+# 3. Radial Calories Over Time
 
-
-
-```
-
-
-#Visual 3: Calories Over Time (Radial)
-
-
-
-```{r}
-#| eval: true
-#| echo: false
-#| warning: false
-#| message: false
-#| fig-width: 12
-#| fig-height: 8
-
-library(showtext)
 font_add_google("Playfair Display", "playfair")
 font_add_google("Lato", "lato")
 showtext_auto()
@@ -693,13 +566,9 @@ ggplot(cal_time, aes(
     color = "#5A5A5A",
     hjust = 0.5
   )
+#####################################################################
 
-```
-
-# Sugar Plot
-
-
-```{r}
+# 4. Sugar vs Popularity Faceted Scatterplot
 #| eval: true
 #| echo: false
 #| warning: false
@@ -719,20 +588,20 @@ nutri_df <- recipes_clean |>
     review_count >= 1
   ) |>
   mutate(
-    review_log = log10(review_count),      # log10(1) = 0 → clean axis start
-    sugar_trim = pmin(sugar_content, 200)  # trims extreme outliers for readability
+    review_log = log10(review_count),      # log10(1) = 0 so clean axis start
+    sugar_trim = pmin(sugar_content, 200)  # trim extreme outliers for readability
   )
 
 ggplot(nutri_df, aes(x = review_log, y = sugar_trim)) +
   geom_point(
     alpha = 0.56,
-    color = "#E8CFA9",   # champagne bubble gold
+    color = "#E8CFA9",   # gold for champagne color 
     size = 2
   ) +
   geom_smooth(
     method = "loess",
     se = FALSE,
-    color = "#C49A6C",   # warm bronze
+    color = "#C49A6C",
     linewidth = 1.2
   ) +
   facet_wrap(~ category_group, scales = "free_y") +
@@ -781,81 +650,9 @@ ggplot(nutri_df, aes(x = review_log, y = sugar_trim)) +
     ),
     plot.margin = margin(20, 20, 20, 20)
   )
+############################################################
 
-
-
-
-
-```
-
-
-
-
-
-```{r}
-#| eval: true
-#| echo: false
-#| warning: false
-#| message: false
-
-# font_add_google("Playfair Display", "playfair")
-# font_add_google("Lato", "lato")
-# showtext_auto()
-# 
-# # Extract top 5 ingredients per category
-# top_ing5 <- recipes_clean |>
-#   filter(
-#     !is.na(category_group),
-#     category_group %in% c("Main Dish","Dessert","Side Dish","Soup","Breakfast","Bread"),
-#     !is.na(recipe_ingredient_parts)
-#   ) |>
-#   mutate(
-#     ingredients_clean = str_remove_all(recipe_ingredient_parts, '^c\\(|\\)$'),
-#     ingredients_clean = str_remove_all(ingredients_clean, '\\"')
-#   ) |>
-#   separate_rows(ingredients_clean, sep = ", ") |>
-#   mutate(
-#     ingredient = str_trim(str_to_lower(ingredients_clean))
-#   ) |>
-#   filter(
-#     ingredient != "",
-#     !ingredient %in% c("salt","pepper","water","oil","butter")
-#   ) |>
-#   count(category_group, ingredient, sort = TRUE) |>
-#   group_by(category_group) |>
-#   slice_max(n, n = 5, with_ties = FALSE) |>
-#   ungroup()
-# 
-# # Build hierarchy
-# level2 <- top_ing5 |>
-#   mutate(
-#     id = paste(category_group, ingredient, sep = "-"),
-#     parent = category_group,
-#     label = ingredient,
-#     value = n
-#   )
-# 
-# level1 <- top_ing5 |>
-#   group_by(category_group) |>
-#   summarise(value = sum(n)) |>
-#   mutate(
-#     id = category_group,
-#     parent = "",
-#     label = category_group
-#   )
-# 
-# sunburst_all <- bind_rows(level1, level2)
-# 
-# # Plot
-# plot_ly(
-#   labels = sunburst_all$label,
-#   parents = sunburst_all$parent,
-#   values = sunburst_all$value,
-#   type = "sunburst",
-#   branchvalues = "total",
-#   maxdepth = 2
-# )
-
+# 5. Ingredient Sunburst
 #| echo: false
 #| warning: false
 #| message: false
@@ -883,17 +680,6 @@ top_ing5 <- recipes_clean |>
   group_by(category_group) |>
   slice_max(n, n = 5, with_ties = FALSE) |>
   ungroup()
-```
-
-
-```{r}
-#| eval: true
-#| echo: false
-#| warning: false
-#| message: false
-#| fig-width: 10
-#| fig-height: 10
-
 
 font_add_google("Playfair Display", "playfair")
 font_add_google("Lato", "lato")
@@ -979,7 +765,7 @@ ggplot() +
     fontface = "bold",
     angle = 0
   ) +
-  # Ingredient labels (angled)
+  # Ingredient labels (need to fix)
   geom_text(
     data = outer,
     aes(x = ing_mid, y = 1.5, label = label, angle = (ing_mid / max(outer$ing_end)) * 360),
@@ -990,12 +776,12 @@ ggplot() +
   ) +
   coord_polar(theta = "x") +
   scale_fill_manual(values = c(
-  "Main Dish" = "#D97A40",   # roasted orange
-  "Dessert"   = "#E8A6C1",   # berry pink
-  "Side Dish" = "#A3C586",   # herb green
-  "Soup"      = "#E2C275",   # golden broth
-  "Breakfast" = "#F2D8A7",   # oat/cream
-  "Bread"     = "#C9A27E"    # whole wheat
+  "Main Dish" = "#D97A40",
+  "Dessert"   = "#E8A6C1",
+  "Side Dish" = "#A3C586",
+  "Soup"      = "#E2C275",
+  "Breakfast" = "#F2D8A7",
+  "Bread"     = "#C9A27E"
 )) +
   labs(
     title = "Top 5 Ingredients by Category",
@@ -1022,147 +808,6 @@ ggplot() +
   )
 
 
-
-```
-
-
-
-
-
-
-# Full Foldable Code
-
-```{r}
-#| code-fold: true
-#| eval: false
-#| echo: true
-
-###############################################
-# Load Libraries
-###############################################
-
-# library(tidyverse)
-# library(janitor)
-# library(lubridate)
-# library(showtext)
-# library(plotly)
-# 
-# font_add_google("Playfair Display", "playfair")
-# font_add_google("Lato", "lato")
-# showtext_auto()
-# 
-# ###############################################
-# # Import & Clean Data
-# ###############################################
-# 
-# recipes_raw <- read_csv("data/recipes_reviews/recipes.csv") |> 
-#   clean_names()
-# 
-# recipes_clean <- recipes_raw |>
-#   filter(
-#     !is.na(aggregated_rating),
-#     !is.na(review_count),
-#     review_count > 0,
-#     calories < 9000,
-#     !is.na(recipe_category)
-#   ) |> 
-#   select(
-#     name, author_name, prep_time, cook_time, total_time, date_published,
-#     recipe_category, keywords, recipe_ingredient_quantities,
-#     recipe_ingredient_parts, aggregated_rating, review_count, calories,
-#     fat_content, saturated_fat_content, cholesterol_content,
-#     sodium_content, carbohydrate_content, fiber_content,
-#     sugar_content, protein_content, recipe_servings
-#   ) |> 
-#   mutate(
-#     category_group = case_when(
-#       str_detect(tolower(recipe_category), "dessert|cookie|cake|pie|candy|ice cream|cheesecake|brownie|pudding|tart") ~ "Dessert",
-#       str_detect(tolower(recipe_category), "beverage|drink|smoothie|shake|punch|cocktail|margarita") ~ "Beverage",
-#       str_detect(tolower(recipe_category), "breakfast|brunch|oatmeal|pancake|waffle|eggs") ~ "Breakfast",
-#       str_detect(tolower(recipe_category), "chicken|beef|pork|lamb|seafood|fish|salmon|tuna|steak|turkey|meat|main dish|casserole|pot roast|meatloaf|meatball") ~ "Main Dish",
-#       str_detect(tolower(recipe_category), "side|vegetable|potato|rice|beans|salad|grain") ~ "Side Dish",
-#       str_detect(tolower(recipe_category), "snack|appetizer|dip|spread") ~ "Appetizer",
-#       str_detect(tolower(recipe_category), "soup|stew|chowder|gumbo") ~ "Soup",
-#       str_detect(tolower(recipe_category), "bread|biscuit|scone|muffin") ~ "Bread",
-#       str_detect(tolower(recipe_category), "mexican|asian|italian|greek|african|japanese|thai|spanish|german|indian|cuban|korean|vietnamese") ~ "Cuisine",
-#       TRUE ~ "Other"
-#     ),
-#     year_published = year(date_published),
-#     ingredient_count = str_count(recipe_ingredient_parts, ",") + 1
-#   ) |> 
-#   filter(category_group != "Other")
-# 
-# ###############################################
-# # Parse ISO 8601 Time
-# ###############################################
-# 
-# parse_iso_time <- function(time_str) {
-#   if (is.na(time_str) || time_str == "" || time_str == "None") return(NA_real_)
-#   clean_str <- str_remove(time_str, "^PT")
-#   hours <- str_extract(clean_str, "\\d+(?=H)") |> as.numeric() |> replace_na(0)
-#   minutes <- str_extract(clean_str, "\\d+(?=M)") |> as.numeric() |> replace_na(0)
-#   seconds <- str_extract(clean_str, "\\d+(?=S)") |> as.numeric() |> replace_na(0)
-#   total <- hours * 60 + minutes + seconds / 60
-#   if (total == 0) return(NA_real_)
-#   return(total)
-# }
-# 
-# recipes_clean <- recipes_clean |>
-#   mutate(
-#     prep_minutes = map_dbl(prep_time, parse_iso_time),
-#     cook_minutes = map_dbl(cook_time, parse_iso_time),
-#     total_minutes = map_dbl(total_time, parse_iso_time),
-#     time_category = case_when(
-#       total_minutes <= 30 ~ "Quick (≤30 min)",
-#       total_minutes <= 60 ~ "Medium (31-60 min)",
-#       total_minutes <= 120 ~ "Long (1-2 hrs)",
-#       total_minutes > 120 ~ "Very Long (>2 hrs)",
-#       TRUE ~ NA_character_
-#     ),
-#     complexity = case_when(
-#       ingredient_count <= 5 ~ "Simple (≤5 ingredients)",
-#       ingredient_count <= 10 ~ "Moderate (6-10 ingredients)",
-#       ingredient_count > 10 ~ "Complex (>10 ingredients)",
-#       TRUE ~ NA_character_
-#     )
-#   )
-# 
-# ###############################################
-# # Fix Sugar Column
-# ###############################################
-# 
-# recipes_clean <- recipes_clean |>
-#   mutate(
-#     sugar_content = as.numeric(sugar_content)
-#   ) |>
-#   filter(
-#     sugar_content >= 0,
-#     sugar_content <= 500
-#   )
-
-###############################################
-# Visualizations
-################################## #############
-
-# 1. 30-Minute Sweet Spot
-# (plot code here)
-
-# 2. Complexity by Rating Tier
-# (plot code here)
-
-# 3. Radial Calories Over Time
-# (plot code here)
-
-# 4. Sugar vs Popularity Faceted Scatterplot
-#  
-
-# 5. Ingredient Sunburst
-# (plot code here)
-
-###############################################
 # End of Code
-###############################################
-
 
 ```
-
