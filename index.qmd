@@ -5,8 +5,10 @@ date: "2026-03-08"
 
 format:
   html:
-    toc: false
-    code-fold: false
+    toc: true
+    code-fold: true
+    embed-resources: true
+draft: false
 
 editor: visual
 description: "A data-driven exploration of how time, complexity, ingredients, and nutrition shape recipe popularity on Food.com."
@@ -41,7 +43,7 @@ The result is the infographic below — a three‑course exploration of how we c
 
 # Final Infographic
 
-![Infographic](images/info.jpg)
+![Infographic](info2.jpg)
 
 
 # Designing the Infographic: A Behind‑the‑Scenes Look
