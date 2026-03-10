@@ -1028,51 +1028,8 @@ ggplot() +
 
 
 
-```{r}
-#| eval: true
-#| echo: false
-lowest_reviews <- recipes_clean |>
-  filter(review_count > 0) |>
-  arrange(review_count) |>
-  slice_head(n = 10)
 
-lowest_reviews
 
-```
-```{r}
-#| eval: true
-#| echo: false
-top_by_category <- recipes_clean |>
-  group_by(category_group) |>
-  slice_max(review_count, n = 5, with_ties = FALSE) |>
-  arrange(category_group, desc(review_count))
-
-top_by_category
-
-```
-```{r}
-#| eval: true
-#| echo: false
-lowest_by_category <- recipes_clean |>
-  filter(review_count > 0) |>
-  group_by(category_group) |>
-  slice_min(review_count, n = 5, with_ties = FALSE) |>
-  arrange(category_group, review_count)
-
-lowest_by_category
-
-```
-```{r}
-#| eval: true
-#| echo: false
-recipes_clean |>
-  summarise(
-    min_reviews = min(review_count),
-    median_reviews = median(review_count),
-    max_reviews = max(review_count)
-  )
-
-```
 # Full Foldable Code
 
 ```{r}
