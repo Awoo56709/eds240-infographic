@@ -1,7 +1,7 @@
-# Recipe Populartity Infographic
+# Recipe Popularity Infographic
 ### *Bon Data-tite*  
 **Author:** Joshua Ferrer‑Lozano  
-**Date:** March 202
+**Date:** March 9, 2026
 
 ## **Overview**
 
