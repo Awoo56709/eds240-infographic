@@ -46,7 +46,7 @@ The result is the infographic below — a three‑course exploration of how we c
 ![Infographic](info2.jpg)
 
 
-# Designing the Infographic: A Behind‑the‑Scenes Look
+# Designing the Infographic
 
 Creating this infographic was as much a design challenge as a data challenge. Below, I walk through the ten design elements that shaped my process and how each contributed to the final product.
 
