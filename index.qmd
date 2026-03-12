@@ -50,7 +50,7 @@ Creating this infographic was as much a design challenge as a data challenge. Be
 
 ## 1. Hierarchy & Visual Flow
 
-I structured the infographic like a meal: a starter, a main dish, a side (*coming soon*), and a dessert.
+I structured the infographic like a meal: a starter, a main dish, a side dish (*coming soon*), and a dessert.
 
 This metaphor created a natural visual flow and helped me organize the story:
 
