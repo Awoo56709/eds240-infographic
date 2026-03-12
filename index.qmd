@@ -22,7 +22,6 @@ editor_options:
   chunk_output_type: console
 ---
 
-
 # What Makes a Recipe Popular? A Data‑Driven Look at How We Cook at Home
 
 Why do some recipes take off while others barely get noticed? It’s a question every home cook, food blogger, and recipe platform has wondered about and one that feels surprisingly personal. We all have dishes we return to again and again, and others we scroll past without a second thought. But what actually drives that difference at scale?
@@ -43,8 +42,7 @@ The result is the infographic below — a three‑course exploration of how we c
 
 # Final Infographic
 
-![Infographic](info2.jpg)
-
+![infographic](Affinity/infographic.png)
 
 # Designing the Infographic
 
@@ -160,7 +158,7 @@ The dataset does not directly represent people or communities in a way that rais
 
 # Closing Thoughts
 
-This project taught me how messy real‑world food data can be and how much care is required to clean, parse, and interpret it responsibly. From ISO 8601 time strings to inconsistent ingredient formatting, the preprocessing shaped what was possible in the final visualizations. Moreover, starting from over 500k observations to a more reliable and not as memory intensive 200k observations gave me a better look at how rich data can be through the right strainers, appliances and funnels we have in our kitchen of tools. 
+This project taught me how messy real‑world food data can be and how much care is required to clean, parse, and interpret it responsibly. From ISO 8601 time strings to inconsistent ingredient formatting, the preprocessing shaped what was possible in the final visualizations. Moreover, starting from over 500k observations to a more reliable and not as memory intensive 200k observations gave me a better look at how rich data can be through the right strainers, appliances and funnels we have in our kitchen of tools.
 
 But the biggest takeaway is this: Popularity isn’t random. It reflects how people actually cook.
 
