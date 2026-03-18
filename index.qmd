@@ -24,17 +24,26 @@ editor_options:
 
 # What Makes a Recipe Popular? A Data‑Driven Look at How We Cook at Home
 
-Why do some recipes take off while others barely get noticed? It’s a question every home cook, food blogger, and recipe platform has wondered about and one that feels surprisingly personal. We all have dishes we return to again and again, and others we scroll past without a second thought. But what actually drives that difference at scaleTo explore this, I turned to a massive data set of more than 188,000 recipes published on Food.com with recipes entered between the years 1999 and 2016. With variables on ingredients, cooking times, ratings, and nutritional information, the data set offered an opportunity to examine the patterns behind recipe engagement and reviews.
+Why do some recipes take off while others barely get noticed? It’s a question every home cook, food blogger, and recipe platform has wondered about and one that feels surprisingly personal. We all have dishes we return to again and again, and others we scroll past without a second thought. But what actually drives that difference at scale. To explore this, I turned to a massive data set of more than 500,000 recipes published on Food.com. With recipes entered between the years 1999 and 2016 I will be manipulating variables on ingredients, cooking times, ratings, and nutritional information to examine the patterns behind recipe reviews and popularity.
 
-My goal was to understand what makes a recipe resonate with home cooks and get the most reviews/scores. I approached this through three guiding questions:
+# Main Questions
+
+My goal was to understand what makes a recipe resonate with home cooks and what leads to reviews/scores. I approached this through three guiding questions:
 
 -   Time: Do quicker recipes attract more engagement?
-
 -   Complexity: Are simpler dishes more popular, or do cooks reward effort?
-
 -   Ingredients: What are dish categories comprising of that make them popular?
 
 The result is the infographic below — a three‑course exploration of how we cook, what we choose, and why certain recipes rise are popular.
+
+# Data
+
+To answer these questions, I used data from <a href="https://www.kaggle.com/code/antgoldbloom/most-and-least-popular-recipes-from-food-com">Kaggle</a> that sourced online recipe data from Food.com. This data provided recipe data from the years 1999 to 2019 and included various variables included but limited to:
+
+- Ingredients
+- Recipe Category
+- Calories
+- Number of Reviews
 
 # Final Infographic
 
@@ -46,14 +55,10 @@ Creating this infographic was as much a design challenge as a data challenge. Be
 
 ## 1. Hierarchy & Visual Flow
 
-I structured the infographic like a light dinner: a main dish and a dessert.
-
-This metaphor created a natural visual flow and helped me organize the story:
+I structured the infographic like a light dinner: a main dish and a dessert. This metaphor created a natural visual flow and helped me organize the story:
 
 -   The 30‑minute plot opens the narrative with a clear, intuitive insight.
-
 -   The ingredient sunburst act as a dish that deepen the this data analysis.
-
 -   The complexity “layered cake” plot anchors the center.
 
 Like a dinner menu, this structure guides the viewer through the thought process to the conclusion.
@@ -63,9 +68,7 @@ Like a dinner menu, this structure guides the viewer through the thought process
 I used a warm, food‑inspired palette — terracotta, caramel, cream, and sage — inspired by Bon Appétit and Sûr La Table. These tones:
 
 -   evoke a culinary aesthetic
-
 -   differentiate plot elements without overwhelming the sense
-
 -   maintain a general cohesion across all visualizations
 
 The palette also reinforces the editorial tone I wanted.
@@ -78,50 +81,39 @@ I used Copperplate Gothic Light and bold for body text and annotations to give t
 
 Annotations were used for turning raw data into a narrative that many cooks think about - time, complexity and ingredient usage:
 
--   “30‑Minute Sweet Spot” label highlights the dramatic drop‑off in engagement.
+-   “44.6% of recipes are less than 30 minutes” label highlights the dramatic drop‑off in engagement.
 
--   A curved arrow emphasizes the decline after 30 minutes.
-
--   The complexity plot uses left‑aligned labels instead of a traditional x‑axis, creating a cleaner editorial look.
-
-These annotations help my audience understand the story without needing to decode the data.
+The annotation helps my audience understand the story without needing to decode the data.
 
 ## 5. Layout
 
-I used spacing, centered titles, and consistent margins to maintain an airy, magazine‑style feel. The sunburst plot was editted to ensure readibility and balance among the rectangular bar chart.
+I used spacing, centered titles, and consistent margins to maintain an airy, magazine‑style feel. The sunburst plot was edited in Affinity to ensure readibility and balance among the rectangular bar chart.
 
 ## 6. Simplicity
 
 Each visualization focuses on a single idea:
 
 -   Time relates to engagement
-
 -   Complexity relates to rating tiers
-
 -   Ingredients relates to category identity
 
-I intentionally avoided overplotting and limited categories where necessary (top three ingredients per category).
+In regards to the sunburst plot, I intentionally avoided overplotting and limited categories (top three ingredients per category).
 
 ## 7. Consistency
 
 All plots share:
 
 -   the general background tone (#F5EFE6 / #F7F2EB)
-
 -   the same font style/family
-
--   a cohesive palette
+-   a cohesive palette (tans/creams/caramel colors)
 
 ## 8. Accessibility
 
 I used:
 
 -   high‑contrast text
-
 -   clear labels
-
 -   intuitive axis scales
-
 -   non‑color cues (stacking order, spacing)
 
 While the palette is not strictly colorblind‑optimized, contrast remains strong and readability is preserved.
@@ -131,10 +123,8 @@ While the palette is not strictly colorblind‑optimized, contrast remains stron
 Each visualization answers a sub‑question, but together they reveal a broader pattern:
 
 -   Home cooks overwhelmingly prefer quick recipes.
-
 -   Moderate complexity is the sweet spot across rating tiers.
-
--   Ingredient families define the identity of recipe categories.
+-   Ingredient families define the identity of recipe categories with ingredients such as Garlic Cloves, Eggs, and Onion as the top ingredients.
 
 ## 10. Applying a DEI Lens
 
@@ -142,13 +132,13 @@ The data set does not directly represent people or communities in a way that rai
 
 # Closing Thoughts
 
-This project taught me how messy real‑world food data can be and how much care is required to clean, parse, and interpret it responsibly. From ISO 8601 time strings to inconsistent ingredient formatting, the preprocessing shaped what was possible in the final visualizations. This data set originally comprised of over 500k observations. Through preprocessing, I was able to filter the data for this analysis which left a little under 200k observations, giving me a better look at how rich data can be through the right strainers, appliances and funnels we have in our kitchen of tools.
+This project taught me how messy real‑world food data can be and how much care is required to clean, parse, and interpret it responsibly. From ISO 8601 time strings to inconsistent ingredient formatting, the preprocessing shaped what was possible in the final visualizations. This data set originally comprised of over 500k observations. Through preprocessing, I was able to filter the data for this analysis which left a little under 200k observations, giving me a better look at how rich data can be through the right strainers, appliances and funnels we have in our "kitchen" of data tools.
 
-Home cooks gravitate toward quick, moderately complex dishes built from familiar ingredients. The patterns are surprisingly consistent across categories and rated recipes.
-
-In the end, this infographic is both a data story and a culinary one. It gives us a look at the preferences and habits that shape how we cook and eat at home.
+Home cooks gravitate toward quick, moderately complex dishes built from familiar ingredients. The patterns are surprisingly consistent across categories and rated recipes. In the end, this infographic is both a data story and a culinary one. It gives us a look at the preferences and habits that shape how we cook and eat at home.
 
 # Full Foldable Code
+
+If you would like to reference the code used in creating this infographic, you can access it below. Please note that customized color palettes and other organizational edits were made in <a href="https://www.affinity.studio/">Affinity</a>
 
 ```{r}
 #| code-fold: true
