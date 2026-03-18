@@ -1,5 +1,5 @@
 ---
-title: "Bon Datatite - A "
+title: "Bon Datatite - A Data-Driven Exploration for Recipes and Popularity"
 author: "Joshua Ferrer-Lozano"
 date: "2026-03-08"
 
