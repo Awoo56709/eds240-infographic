@@ -1,5 +1,5 @@
 ---
-title: "FMP4 reviewing feedback"
+title: "Bon Datatite - A "
 author: "Joshua Ferrer-Lozano"
 date: "2026-03-08"
 
@@ -24,25 +24,21 @@ editor_options:
 
 # What Makes a Recipe Popular? A Data‑Driven Look at How We Cook at Home
 
-Why do some recipes take off while others barely get noticed? It’s a question every home cook, food blogger, and recipe platform has wondered about and one that feels surprisingly personal. We all have dishes we return to again and again, and others we scroll past without a second thought. But what actually drives that difference at scale?
+Why do some recipes take off while others barely get noticed? It’s a question every home cook, food blogger, and recipe platform has wondered about and one that feels surprisingly personal. We all have dishes we return to again and again, and others we scroll past without a second thought. But what actually drives that difference at scaleTo explore this, I turned to a massive data set of more than 188,000 recipes published on Food.com with recipes entered between the years 1999 and 2016. With variables on ingredients, cooking times, ratings, and nutritional information, the data set offered an opportunity to examine the patterns behind recipe engagement and reviews.
 
-To explore this, I turned to a massive dataset of more than 188,000 recipes published on Food.com between 1999 and 2016. With metadata on ingredients, cooking times, ratings, and nutritional information, the dataset offered an opportunity to examine the patterns behind recipe engagement.
-
-My goal was to understand what makes a recipe resonate with home cooks.
-
-I approached this through three guiding questions:
+My goal was to understand what makes a recipe resonate with home cooks and get the most reviews/scores. I approached this through three guiding questions:
 
 -   Time: Do quicker recipes attract more engagement?
 
 -   Complexity: Are simpler dishes more popular, or do cooks reward effort?
 
--   Ingredients & Nutrition: What defines the “identity” of different recipe categories, and does nutrition influence popularity?
+-   Ingredients: What are dish categories comprising of that make them popular?
 
-The result is the infographic below — a three‑course exploration of how we cook, what we choose, and why certain recipes rise to the top.
+The result is the infographic below — a three‑course exploration of how we cook, what we choose, and why certain recipes rise are popular.
 
 # Final Infographic
 
-![infographic](Affinity/infographic.png)
+![](images/infographic.jpg)
 
 # Designing the Infographic
 
@@ -50,15 +46,15 @@ Creating this infographic was as much a design challenge as a data challenge. Be
 
 ## 1. Hierarchy & Visual Flow
 
-I structured the infographic like a meal: a starter, a main dish, a side dish (*coming soon*), and a dessert.
+I structured the infographic like a light dinner: a main dish and a dessert.
 
 This metaphor created a natural visual flow and helped me organize the story:
 
 -   The 30‑minute plot opens the narrative with a clear, intuitive insight.
 
--   The complexity “layered cake” plot anchors the center.
+-   The ingredient sunburst act as a dish that deepen the this data analysis.
 
--   The ingredient sunburst and sugar‑popularity scatterplot act as dishes that deepen the this data analysis.
+-   The complexity “layered cake” plot anchors the center.
 
 Like a dinner menu, this structure guides the viewer through the thought process to the conclusion.
 
@@ -68,7 +64,7 @@ I used a warm, food‑inspired palette — terracotta, caramel, cream, and sage 
 
 -   evoke a culinary aesthetic
 
--   differentiate plot elements without overwhelming
+-   differentiate plot elements without overwhelming the sense
 
 -   maintain a general cohesion across all visualizations
 
@@ -76,11 +72,11 @@ The palette also reinforces the editorial tone I wanted.
 
 ## 3. Typography
 
-I paired Playfair Display for titles with Lato for body text and annotations. This serif‑sans pairing is common in modern food media and creates a balance between elegance and readability.
+I used Copperplate Gothic Light and bold for body text and annotations to give the aesthetic of elegance and readability.
 
 ## 4. Annotation
 
-Annotations were essential for turning raw data into a narrative:
+Annotations were used for turning raw data into a narrative that many cooks think about - time, complexity and ingredient usage:
 
 -   “30‑Minute Sweet Spot” label highlights the dramatic drop‑off in engagement.
 
@@ -88,13 +84,11 @@ Annotations were essential for turning raw data into a narrative:
 
 -   The complexity plot uses left‑aligned labels instead of a traditional x‑axis, creating a cleaner editorial look.
 
--   The sugar‑popularity plot includes intuitive log‑scale labels (“1”, “10”, “100”, “1k”, “10k”).
-
-These annotations help the viewer understand the story without needing to decode the data.
+These annotations help my audience understand the story without needing to decode the data.
 
 ## 5. Layout
 
-I used generous spacing, centered titles, and consistent margins to maintain an airy, magazine‑style feel. Circular elements (like the sunburst (*and radial calorie plot*) balance the rectangular bar charts and scatterplots, creating visual variety without monotony.
+I used spacing, centered titles, and consistent margins to maintain an airy, magazine‑style feel. The sunburst plot was editted to ensure readibility and balance among the rectangular bar chart.
 
 ## 6. Simplicity
 
@@ -106,9 +100,7 @@ Each visualization focuses on a single idea:
 
 -   Ingredients relates to category identity
 
--   Sugar relates to popularity
-
-I intentionally avoided overplotting and limited categories where necessary (top five ingredients per category, three main facets for the sugar plot).
+I intentionally avoided overplotting and limited categories where necessary (top three ingredients per category).
 
 ## 7. Consistency
 
@@ -116,13 +108,9 @@ All plots share:
 
 -   the general background tone (#F5EFE6 / #F7F2EB)
 
--   the same font system
-
--   similar annotation styling
+-   the same font style/family
 
 -   a cohesive palette
-
-This consistency makes the infographic feel unified rather than distracting or detracting from the other "dishes" so to speak.
 
 ## 8. Accessibility
 
@@ -148,21 +136,15 @@ Each visualization answers a sub‑question, but together they reveal a broader 
 
 -   Ingredient families define the identity of recipe categories.
 
--   Nutrition (like sugar) can play a category‑dependent role in popularity.
-
-The narrative builds from practical (time) to structural (ingredients) to evaluative (ratings and nutrition).
-
 ## 10. Applying a DEI Lens
 
-The dataset does not directly represent people or communities in a way that raises equity concerns, but I was mindful of how I categorized cuisines. Perhaps looking into national dishes can be a future analysis.
+The data set does not directly represent people or communities in a way that raises equity concerns, but I was mindful of how I categorized cuisines. Perhaps looking into ethnic dishes can be a future analysis.
 
 # Closing Thoughts
 
-This project taught me how messy real‑world food data can be and how much care is required to clean, parse, and interpret it responsibly. From ISO 8601 time strings to inconsistent ingredient formatting, the preprocessing shaped what was possible in the final visualizations. Moreover, starting from over 500k observations to a more reliable and not as memory intensive 200k observations gave me a better look at how rich data can be through the right strainers, appliances and funnels we have in our kitchen of tools.
+This project taught me how messy real‑world food data can be and how much care is required to clean, parse, and interpret it responsibly. From ISO 8601 time strings to inconsistent ingredient formatting, the preprocessing shaped what was possible in the final visualizations. This data set originally comprised of over 500k observations. Through preprocessing, I was able to filter the data for this analysis which left a little under 200k observations, giving me a better look at how rich data can be through the right strainers, appliances and funnels we have in our kitchen of tools.
 
-But the biggest takeaway is this: Popularity isn’t random. It reflects how people actually cook.
-
-Home cooks gravitate toward quick, moderately complex dishes built from familiar ingredients. The patterns are surprisingly consistent across categories and years.
+Home cooks gravitate toward quick, moderately complex dishes built from familiar ingredients. The patterns are surprisingly consistent across categories and rated recipes.
 
 In the end, this infographic is both a data story and a culinary one. It gives us a look at the preferences and habits that shape how we cook and eat at home.
 
@@ -664,7 +646,7 @@ ggplot(nutri_df, aes(x = review_log, y = sugar_trim)) +
 #| message: false
 
 # Extract top 5 ingredients per category (static version for ggplot sunburst)
-top_ing5 <- recipes_clean |>
+top_ing3 <- recipes_clean |>
   filter(
     !is.na(category_group),
     category_group %in% c("Main Dish", "Dessert", "Side Dish", "Soup", "Breakfast", "Bread"),
@@ -682,9 +664,14 @@ top_ing5 <- recipes_clean |>
     ingredient != "",
     !ingredient %in% c("salt", "pepper", "water", "oil", "butter")
   ) |>
-  count(category_group, ingredient, sort = TRUE) |>
+  count(category_group, ingredient, name = "ingredient_count") |>
+  left_join(category_totals, by = "category_group") |>
+  mutate(
+    prop = ingredient_count / total_recipes,
+    prop_label = scales::percent(prop, accuracy = 1)
+  ) |>
   group_by(category_group) |>
-  slice_max(n, n = 5, with_ties = FALSE) |>
+  slice_max(ingredient_count, n = 3, with_ties = FALSE) |>
   ungroup()
 
 font_add_google("Playfair Display", "playfair")
@@ -771,15 +758,20 @@ ggplot() +
     fontface = "bold",
     angle = 0
   ) +
-  # Ingredient labels (need to fix)
+  # Ingredient labels 
   geom_text(
-    data = outer,
-    aes(x = ing_mid, y = 1.5, label = label, angle = (ing_mid / max(outer$ing_end)) * 360),
-    family = "lato",
-    size = 3.2,
-    color = "#4A3F35",
-    hjust = 0
-  ) +
+  data = outer,
+  aes(
+    x = ing_mid,
+    y = 1.55,
+    label = paste0(label, " (", prop_label, ")"),
+    angle = (ing_mid / max(outer$ing_end)) * 360 - 90
+  ),
+  family = "lato",
+  size = 4,
+  color = "#4A3F35",
+  hjust = 0
+) +
   coord_polar(theta = "x") +
   scale_fill_manual(values = c(
   "Main Dish" = "#D97A40",
@@ -790,7 +782,7 @@ ggplot() +
   "Bread"     = "#C9A27E"
 )) +
   labs(
-    title = "Top 5 Ingredients by Category",
+    title = "Top 3 Ingredients by Category",
     subtitle = "A  sunburst showing the most common ingredients across recipe categories",
     fill = "Category"
   ) +
