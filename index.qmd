@@ -40,10 +40,10 @@ The result is the infographic below — a three‑course exploration of how we c
 
 To answer these questions, I used data from <a href="https://www.kaggle.com/code/antgoldbloom/most-and-least-popular-recipes-from-food-com">Kaggle</a> that sourced online recipe data from Food.com. This data provided recipe data from the years 1999 to 2019 and included various variables included but limited to:
 
-- Ingredients
-- Recipe Category
-- Calories
-- Number of Reviews
+-   Ingredients
+-   Recipe Category
+-   Calories
+-   Number of Reviews
 
 # Final Infographic
 
@@ -635,7 +635,7 @@ ggplot(nutri_df, aes(x = review_log, y = sugar_trim)) +
 #| warning: false
 #| message: false
 
-# Extract top 5 ingredients per category (static version for ggplot sunburst)
+# Extract top 3 ingredients per category (static version for ggplot sunburst)
 top_ing3 <- recipes_clean |>
   filter(
     !is.na(category_group),
